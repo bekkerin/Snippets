@@ -1,0 +1,2 @@
+Written with method 2
+and here is a second line
