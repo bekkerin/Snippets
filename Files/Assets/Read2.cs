@@ -16,11 +16,14 @@ public class Read2 : MonoBehaviour
         //string appendText = "This is extra text" + "\n";
         //File.AppendAllText(path, appendText);
 
+        fileContents.text = ""; // clear the text on screen
+
         // Open the file to read from.
         string[] readText = File.ReadAllLines(path);
         foreach (string s in readText)
         {
             Debug.Log(s);
+            fileContents.text += s + "\n"; // append and go to new line
         }
     }
 

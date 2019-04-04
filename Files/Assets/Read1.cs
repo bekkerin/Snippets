@@ -15,6 +15,7 @@ public class Read1 : MonoBehaviour
 
         string path = "Assets/Resources/test.txt";
         string lineRead = "";
+        fileContents.text = "";
 
         //Read the text from directly from the test.txt file
         StreamReader reader = new StreamReader(path);
@@ -22,8 +23,8 @@ public class Read1 : MonoBehaviour
         {
             //Debug.Log(reader.ReadLine());
             lineRead = reader.ReadLine();
-            //fileContents.text = lineRead;
             Debug.Log(lineRead);
+            fileContents.text += lineRead + "\n"; // append and go to new line
         }
         reader.Close();
 

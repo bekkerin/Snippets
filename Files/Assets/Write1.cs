@@ -7,14 +7,18 @@ using UnityEngine.UI;
 
 public class Write1 : MonoBehaviour
 {
+    public InputField writeToFile;
  
     public  void WriteString()//NEED TO MAKE THIS PUBLIC SO WE CAN CONNECT TO BUTTON
     {
         string path = "Assets/Resources/test.txt";
 
+        // get text from the inputfield
+        string dataToBeWritten = writeToFile.text;
+
         //Write some text to the test.txt file
         StreamWriter writer = new StreamWriter(path, true);
-        writer.WriteLine("Written with method 1");
+        writer.WriteLine(dataToBeWritten);
         writer.Close();
 
         //Re-import the file to update the reference in the editor

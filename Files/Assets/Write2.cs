@@ -6,17 +6,21 @@ using UnityEngine.UI;
 
 public class Write2 : MonoBehaviour
 {
+    public InputField writeToFile;
 
     public void WriteString2()//NEED TO MAKE THIS PUBLIC SO WE CAN CONNECT TO BUTTON
     {
         string path = "Assets/Resources/test.txt";
         //string path = @"c:\temp\MyTest.txt";
 
+        // get text from the inputfield
+        string dataToBeWritten = writeToFile.text;
+
         // This text is added only once to the file.
         if (File.Exists(path))
         {
             // IN CASE WE WANT TO WRITE MULTIPLE LINES.
-            string[] createText = { "Written with method 2", "and here is a second line" };
+            string[] createText = { "Written with method 2", dataToBeWritten };
             File.WriteAllLines(path, createText);
         }
         else
