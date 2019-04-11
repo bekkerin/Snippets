@@ -5,12 +5,12 @@ using UnityEngine.UI;
 
 public class DropDownSelect : MonoBehaviour
 {
-    // this script is attached to the canvas, but could be attached to any gameobject that has an update method.
+    // this script is attached to the manager, but could be attached to any gameobject that has an update method.
     public Dropdown MyDropDown;
     public Text MyChoice;
 
     // Update is called once per frame
-    void Update()
+    public void ShowChoice()
     {
         switch(MyDropDown.value)
         {
