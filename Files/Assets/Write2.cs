@@ -27,7 +27,9 @@ public class Write2 : MonoBehaviour
         {
             Debug.Log("File does not exist");
         }
-        Debug.Log("done writing with method 2");
+
+        AssetDatabase.ImportAsset(path);
+        TextAsset asset = (TextAsset)Resources.Load("test");
     }
 
   
