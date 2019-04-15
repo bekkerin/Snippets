@@ -2,3 +2,6 @@
 * Add a Player script. Add a public string playerName and public int playerScore.
 * To Assets add class PlayerData (remove Monobehavior) with public int score.
 * To Assets add a script SaveSystem. remove MonoBehavior. Make it a static class. add using System.IO and using System.Runtime.Serialization.Formatters.Binary . 
+
+
+had to put player.dat in assets folder manually.

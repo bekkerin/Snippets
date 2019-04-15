@@ -412,7 +412,8 @@ MonoBehaviour:
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 1
     m_LineSpacing: 1
-  m_Text: Use the + key to increase the score and the - key to decrease the score.
+  m_Text: Use the UP arrow to increase the score and the DOWN arrow to decrease the
+    score.
 --- !u!222 &879047006
 CanvasRenderer:
   m_ObjectHideFlags: 0
