@@ -25,6 +25,7 @@ public class WriteHighScores : MonoBehaviour
         bool scoreRecorded = false; // we have not written new score to file yet
  
         string[] playerScores = File.ReadAllLines(path); // array of lines in file with name and score
+        Debug.Log(playerScores);
  
         // ReadAllLines automatically closes the file
 
@@ -38,12 +39,14 @@ public class WriteHighScores : MonoBehaviour
             score = Convert.ToInt32(fields[1]); // second field is score
             if(score < ScoreKeeper.newScore && scoreRecorded == false)
             {
-                writer.Write("Ernst" + "," + ScoreKeeper.newScore + "\n"); // before we write the existing score, write the new high score
-                HighScores.text += "Ernst" + " : " + score.ToString() + "\n"; // also show to user
-                scoreRecorded = true; 
+                writer.Write(GetPlayerName.playerName + "," + ScoreKeeper.newScore + "\n"); // before we write the existing score, write the new high score
+                HighScores.text += GetPlayerName.playerName + " : " + score.ToString() + "\n"; // also show to user
+                scoreRecorded = true;
+                Debug.Log(GetPlayerName.playerName + " : " + score.ToString() + "\n");
             }
             writer.Write(playerScore + "\n"); // either way, still write the existing score
             HighScores.text += playerName + " : " + score.ToString() + "\n"; // also show to user
+            Debug.Log(playerName + " : " + score.ToString() + "\n");
         }
 
         writer.Close(); // so we don't lock it for next round

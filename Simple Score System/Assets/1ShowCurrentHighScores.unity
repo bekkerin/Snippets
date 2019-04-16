@@ -639,6 +639,7 @@ GameObject:
   - component: {fileID: 1805964240}
   - component: {fileID: 1805964239}
   - component: {fileID: 1805964238}
+  - component: {fileID: 1805964242}
   - component: {fileID: 1805964241}
   m_Layer: 5
   m_Name: NextButton
@@ -718,6 +719,17 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 0
         m_CallState: 2
+      - m_Target: {fileID: 1805964236}
+        m_MethodName: 
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: 
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
     m_TypeName: UnityEngine.UI.Button+ButtonClickedEvent, UnityEngine.UI, Version=1.0.0.0,
       Culture=neutral, PublicKeyToken=null
 --- !u!114 &1805964239
@@ -769,6 +781,19 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 2a95ec04f40a2c942950cc1ea848c540, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+--- !u!114 &1805964242
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1805964236}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 14979a6e41b6e4b499fdd4874de725da, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  NameField: {fileID: 0}
 --- !u!1 &2055864951
 GameObject:
   m_ObjectHideFlags: 0
