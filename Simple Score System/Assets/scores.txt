@@ -1,0 +1,3 @@
+Ernst,10
+Ernst,6
+Lucky,5
