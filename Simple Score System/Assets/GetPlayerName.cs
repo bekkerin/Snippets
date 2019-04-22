@@ -1,15 +1,22 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
-using UnityEngine.UI;
 
 public class GetPlayerName : MonoBehaviour
 {
-    public InputField NameField;
-    static public string playerName;
-
-    public void GetName()
+    // Start is called before the first frame update
+    void Start()
     {
-        playerName = NameField.text;
+        
+    }
+
+<<<<<<< HEAD
+    public void GetName()
+=======
+    // Update is called once per frame
+    void Update()
+>>>>>>> parent of 323bbfd... snippets
+    {
+        
     }
 }

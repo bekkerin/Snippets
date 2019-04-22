@@ -1,0 +1,6 @@
+<<<<<<< HEAD
+=======
+Ernst,10
+Ernst,6
+Lucky,5
+>>>>>>> parent of 323bbfd... snippets
