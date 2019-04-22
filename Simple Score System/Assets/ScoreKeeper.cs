@@ -1,5 +1,6 @@
 ﻿using UnityEngine;
 using UnityEngine.UI;
+using System;
 
 public class ScoreKeeper : MonoBehaviour
 {
@@ -10,12 +11,14 @@ public class ScoreKeeper : MonoBehaviour
     {
         newScore += 1;
         NewScore.text = newScore.ToString();
+        Debug.Log(newScore);
     }
 
     public void DecreaseScore() // clicking on - button decreases score
     {
         newScore -= 1;
         NewScore.text = newScore.ToString();
+        Debug.Log(newScore);
     }
-
+ 
 }

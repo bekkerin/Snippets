@@ -1,5 +1,0 @@
-Ernst,20
-Ernst,15
-Ernst,10
-Ernst,6
-Lucky,5

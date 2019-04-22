@@ -8,7 +8,7 @@ public class GetPlayerName : MonoBehaviour
     public InputField NameField;
     static public string playerName;
 
-    void GetName()
+    public void GetName()
     {
         playerName = NameField.text;
     }
