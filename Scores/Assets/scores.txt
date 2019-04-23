@@ -1,0 +1,5 @@
+Ernst,77
+Ernst,55
+Ernst,45
+Ernst,35
+Ernst,25
