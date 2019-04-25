@@ -1,5 +1,5 @@
+Lucky,100
+Ernst,99
+Lucky,88
 Ernst,77
-Ernst,55
-Ernst,45
-Ernst,35
-Ernst,25
+Lucky,75
