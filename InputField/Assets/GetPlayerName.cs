@@ -7,6 +7,7 @@ using UnityEngine.UI;
 public class GetPlayerName : MonoBehaviour
 {
     public InputField PlayerName;
+    public string myPlayerName;
     public Text ShowName;
 
     // Start is called before the first frame update
@@ -18,6 +19,7 @@ public class GetPlayerName : MonoBehaviour
 
     public void DisplayName()
     {
-        ShowName.text = PlayerName.text;
+        myPlayerName = PlayerName.text; // assign input to string
+        ShowName.text = myPlayerName; //assign string to textbox
     }
 }
