@@ -8,8 +8,10 @@ using UnityEngine.UI;
 public class KeepData: MonoBehaviour 
 {
     public static string PlayerName; // STATIC so it is preserved between classes
+    public static int PlayerLives;
     public InputField PlayerNameInput;
     public Text showPlayerName;
+    public Text showPlayerLives;
 
     void Awake()
     {
@@ -28,6 +30,19 @@ public class KeepData: MonoBehaviour
         Debug.Log(PlayerName);
     }
 
+    public void SetLives()
+    {
+        PlayerLives = 10;
+        Debug.Log(PlayerLives + " given");
+    }
+    public void ShowLives()
+    {
+        showPlayerLives.text = PlayerLives.ToString() + " lives";
+        Debug.Log("lives: " + PlayerLives);
+    }
 
+/*
+ * change background - inspector for camera, from skybox to solid color
+ */
 
 }
