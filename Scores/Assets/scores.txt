@@ -1,5 +1,5 @@
+Midnight,250
 Richard,200
 Lucky,100
 Ernst,99
 Lucky,88
-Ernst,77
