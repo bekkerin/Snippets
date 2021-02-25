@@ -1,5 +1,7 @@
 Midnight,250
 Richard,200
+Derek,150
+Charlotte,125
 Lucky,100
 Ernst,99
 Lucky,88
