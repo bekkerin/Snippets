@@ -5,25 +5,24 @@ using UnityEngine.UI;
 
 public class ToggleAction : MonoBehaviour
 {
-    public Button MyButton;
     public Text MyText;
-    public InputField MyInputField;
-    public Slider MySlider;
     public Toggle MyToggle;
+    public Camera cam;
 
     //need to connect to ToggleAction.Toggle_Changed(), not ToggleAction.Toggle_Changed(bool). 
     public void Toggle_Changed(bool newValue)
     {
-        MyButton.enabled = newValue;
-        MyInputField.enabled = newValue;
-        MySlider.interactable = newValue;
+
         if(newValue == false)
         {
-            MyText.text = "checkbox off";
+            MyText.text = "checkbox off with value " + newValue.ToString() 
+                + "\nClick on the checkbox to hear the duck quack.";
+            cam.GetComponent<AudioSource>().Pause();
         }
         else
         {
-            MyText.text = "checkbox on";
+            MyText.text = "checkbox on with value " + newValue.ToString();
+            cam.GetComponent<AudioSource>().Play();
         }
 
 
