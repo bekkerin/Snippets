@@ -17,8 +17,8 @@ public class Write1 : MonoBehaviour
         string dataToBeWritten = writeToFile.text;
 
         //Write some text to the test.txt file
-        StreamWriter writer = new StreamWriter(path, true);
-        writer.WriteLine(dataToBeWritten);
+        StreamWriter writer = new StreamWriter(path, true); // append is true
+        writer.WriteLine(dataToBeWritten); // notice that it does not write "written with method 1"
         writer.Close();
 
         //Re-import the file to update the reference in the editor

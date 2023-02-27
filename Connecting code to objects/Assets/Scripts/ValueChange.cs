@@ -1,3 +1,5 @@
+// Since this script works on two buttons, it makes more sense to connect it to a third gameobject where it can reference both buttons. If we had separate scripts for the two buttons, it might be better to connect each script to the respective button.
+
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;

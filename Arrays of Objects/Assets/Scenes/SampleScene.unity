@@ -1114,7 +1114,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   coins: []
-  movement: 5
+  movement: 50
 --- !u!1 &963194225
 GameObject:
   m_ObjectHideFlags: 0

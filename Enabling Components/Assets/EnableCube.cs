@@ -1,3 +1,5 @@
+// this script is attached to the gameplay object. Sometimes you want to not use an object. you can simply set Setactive to false.
+
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;

@@ -1,4 +1,6 @@
-﻿using System.Collections;
+﻿//this script is atacched to the toggle gameobject. the audiosource with the quacking sound is attached to the camera.
+
+using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;

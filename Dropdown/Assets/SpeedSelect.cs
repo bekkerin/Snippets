@@ -1,3 +1,5 @@
+//this script is attached to the speed dropdown. Use the On Value CHanged event in the dropdown component.
+
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
@@ -32,7 +34,7 @@ public class SpeedSelect : MonoBehaviour
             case 3:
                 speed = 1.0f;
                 break;
-            default:
+            default: // speed if no item is selected. in this case, the player does not move
                 speed = 0.0f;
                 break;
         }

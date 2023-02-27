@@ -1,3 +1,5 @@
+// this script is attached to the GameManager
+
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;

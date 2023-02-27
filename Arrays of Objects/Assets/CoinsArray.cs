@@ -2,10 +2,10 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class CoinSize : MonoBehaviour
+public class CoinsArray : MonoBehaviour
 {
     public GameObject[] coins; // have been tagged with "prize"
-    public float movement = 50f;
+    public float movement = 5f;
 
     // Start is called before the first frame update
     void Start()
