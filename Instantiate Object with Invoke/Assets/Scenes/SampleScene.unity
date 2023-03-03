@@ -533,7 +533,7 @@ MonoBehaviour:
     m_VerticalOverflow: 0
     m_LineSpacing: 1
   m_Text: The Invoke method in Start automatically starts creating cylinders. You
-    can cancel the Invoke with the spacebar.
+    can cancel and restart the Invoke with the spacebar.
 --- !u!222 &836276264
 CanvasRenderer:
   m_ObjectHideFlags: 0

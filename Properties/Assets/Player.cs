@@ -20,6 +20,7 @@ public class Player : MonoBehaviour
 
     //Lives is a property that converts experience
     //points into the lives of a player automatically
+    // for every 10 experience, the player gets another life
     public int Lives
     {
         get

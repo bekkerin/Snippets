@@ -156,10 +156,10 @@ RectTransform:
   m_Father: {fileID: 1445697128}
   m_RootOrder: 1
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
-  m_AnchorMin: {x: 0.5566606, y: 0.707}
-  m_AnchorMax: {x: 1, y: 1}
-  m_AnchoredPosition: {x: -17, y: -10.5}
-  m_SizeDelta: {x: -146, y: -57}
+  m_AnchorMin: {x: 0, y: 0.81100005}
+  m_AnchorMax: {x: 0.4707484, y: 1}
+  m_AnchoredPosition: {x: 48.766785, y: -6.2718964}
+  m_SizeDelta: {x: -168.4663, y: -44.4563}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &320537827
 MonoBehaviour:
@@ -236,10 +236,10 @@ RectTransform:
   m_Father: {fileID: 1445697128}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
-  m_AnchorMin: {x: 0, y: 0.707}
-  m_AnchorMax: {x: 0.5, y: 1}
-  m_AnchoredPosition: {x: 17.5, y: -5.5}
-  m_SizeDelta: {x: -185, y: -57}
+  m_AnchorMin: {x: 0.487271, y: 0.81100005}
+  m_AnchorMax: {x: 1, y: 1}
+  m_AnchoredPosition: {x: 7, y: -6.272003}
+  m_SizeDelta: {x: -196, y: -44.46}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &428423250
 MonoBehaviour:
@@ -283,7 +283,7 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 428423248}
   m_CullTransparentMesh: 1
---- !u!1 &572844997
+--- !u!1 &462525127
 GameObject:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -291,23 +291,23 @@ GameObject:
   m_PrefabAsset: {fileID: 0}
   serializedVersion: 6
   m_Component:
-  - component: {fileID: 572844998}
-  - component: {fileID: 572845000}
-  - component: {fileID: 572844999}
+  - component: {fileID: 462525128}
+  - component: {fileID: 462525130}
+  - component: {fileID: 462525129}
   m_Layer: 5
-  m_Name: HealthText
+  m_Name: Instructions
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
---- !u!224 &572844998
+--- !u!224 &462525128
 RectTransform:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 572844997}
+  m_GameObject: {fileID: 462525127}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
@@ -316,25 +316,25 @@ RectTransform:
   m_Father: {fileID: 1445697128}
   m_RootOrder: 3
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
-  m_AnchorMin: {x: 0.5566606, y: 0.521}
-  m_AnchorMax: {x: 1, y: 0.67200005}
-  m_AnchoredPosition: {x: -8, y: 11.5}
-  m_SizeDelta: {x: -146, y: -35}
+  m_AnchorMin: {x: 0, y: 0.5824158}
+  m_AnchorMax: {x: 1, y: 0.783337}
+  m_AnchoredPosition: {x: 39, y: 2}
+  m_SizeDelta: {x: -226.2245, y: -29.212006}
   m_Pivot: {x: 0.5, y: 0.5}
---- !u!114 &572844999
+--- !u!114 &462525129
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 572844997}
+  m_GameObject: {fileID: 462525127}
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 5f7201a12d95ffc409449d95f23cf332, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   m_Material: {fileID: 0}
-  m_Color: {r: 0.9339623, g: 0.058739666, b: 0.058739666, a: 1}
+  m_Color: {r: 0.19607843, g: 0.19607843, b: 0.19607843, a: 1}
   m_RaycastTarget: 1
   m_RaycastPadding: {x: 0, y: 0, z: 0, w: 0}
   m_Maskable: 1
@@ -343,25 +343,26 @@ MonoBehaviour:
       m_Calls: []
   m_FontData:
     m_Font: {fileID: 10102, guid: 0000000000000000e000000000000000, type: 0}
-    m_FontSize: 25
+    m_FontSize: 20
     m_FontStyle: 0
     m_BestFit: 0
     m_MinSize: 2
     m_MaxSize: 40
-    m_Alignment: 0
+    m_Alignment: 4
     m_AlignByGeometry: 0
     m_RichText: 1
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 0
     m_LineSpacing: 1
-  m_Text: 'Health: '
---- !u!222 &572845000
+  m_Text: Experience and Lives are properties of Player. Increase experience with
+    the button. For every ten experience, the player gets another life.
+--- !u!222 &462525130
 CanvasRenderer:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 572844997}
+  m_GameObject: {fileID: 462525127}
   m_CullTransparentMesh: 1
 --- !u!1 &705507993
 GameObject:
@@ -868,7 +869,7 @@ RectTransform:
   - {fileID: 428423249}
   - {fileID: 320537826}
   - {fileID: 915712144}
-  - {fileID: 572844998}
+  - {fileID: 462525128}
   m_Father: {fileID: 0}
   m_RootOrder: 4
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
@@ -1055,10 +1056,10 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   increaseButton: {fileID: 915712145}
-  player: {fileID: 2026244591}
+  player: {fileID: 0}
   livesText: {fileID: 428423250}
   experienceText: {fileID: 320537827}
-  healthText: {fileID: 572844999}
+  healthText: {fileID: 0}
 --- !u!4 &1946643259
 Transform:
   m_ObjectHideFlags: 0

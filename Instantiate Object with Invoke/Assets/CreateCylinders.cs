@@ -9,6 +9,7 @@ using UnityEngine;
 public class CreateCylinders : MonoBehaviour
 {
     public GameObject newCylinder;
+    private bool canceled = false;
     
     // Start is called before the first frame update
     void Start()
@@ -28,9 +29,20 @@ public class CreateCylinders : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        if (Input.GetKey(KeyCode.Space))
+        if (Input.GetKeyDown(KeyCode.Space))
         {
-            CancelInvoke();        
+            if (!canceled)
+            {
+                CancelInvoke();
+                canceled = true;
+            }
+            else
+            {
+                InvokeRepeating("SpawnCylinder", 2, 1);
+                canceled = false;
+            }
+
+                   
         }
 
     }

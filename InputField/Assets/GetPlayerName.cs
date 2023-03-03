@@ -1,4 +1,7 @@
-﻿using System.Collections;
+﻿// this script is attached to the Playername Inputfield. The code in Displayname() executes in the On Value Changed method so every time another character is entered, the string variable and text of Showname are updated.
+// we make myPlayerName string static so it can be used in the next scene.
+
+using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
@@ -7,15 +10,10 @@ using UnityEngine.UI;
 public class GetPlayerName : MonoBehaviour
 {
     public InputField PlayerName;
-    public string myPlayerName;
+    public static string myPlayerName;
     public Text ShowName;
 
-    // Start is called before the first frame update
-    // Update is called once per frame
-    void Update()
-    {
-        
-    }
+
 
     public void DisplayName()
     {
