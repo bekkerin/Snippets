@@ -27,6 +27,10 @@ public class WriteScores : MonoBehaviour
         newName = NewName.text;
         newScore = NewScore.text;
 
+        // you need to have at least one record (name, score) for this to work.
+        // if there is no record at all,  the code  below will report an index out of bounds.
+        // you can fix this with the code at https://www.techiedelight.com/check-if-file-is-empty-csharp/
+
         StreamReader reader = new StreamReader(path);
         while (!reader.EndOfStream )
         {

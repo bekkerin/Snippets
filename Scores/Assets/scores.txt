@@ -1,5 +1,3 @@
-Lucky,450
-Miracle,345
-Midnight,250
-Miracle2,225
-Miracle2,225
+Midnight,200
+Sox,150
+Ernst, 100
