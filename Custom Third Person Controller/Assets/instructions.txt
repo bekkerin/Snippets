@@ -1,0 +1,15 @@
+Start a project in 3D URP (Universal Render Pipeline)
+If you have not added the Third Person Controller to your Assets, get it from https://assetstore.unity.com/packages/essentials/starter-assets-third-person-character-controller-196526 
+In Unity, find it in the Package Manager (Window - Package Manager - Packages:My Assets - Sort: Purchase Date (up). You may have to refresh the Assets list (middle below). First click Download, then click Import. You will have to install/upgrade dependencies. You also want to *Restart* the editor. You may need to use Import from the Package Manager again. When you are done importing, you will see a folder Assets/StarterAssets. The third person controller is in the subfolder ThirdPersonController.
+Start with the SampleScene. Create a plane (Game Object - 3d Object - Plane). Reset the transform of the plane. From the Assets/StarterAssets/ThirdPersonController/Prefabs folder, add to the Hierarchy the MainCamera, the PlayerFollowCamera, and the PlayerArmature. Delete or disable the old Main Camera. 
+The robot will be purple. In the Assets/StarterAssets/THirdPersonCOntroller/Character/Materials folder, highlight all three materials and convert them to URP with Edit-Rendering-Materials-Convert selected built-in materials to URP. Click Proceed. 
+Prepare the PlayerArmature for replacing the mesh: right click - Prefab - Unpack Completely. 
+
+Get a character from Mixamo. Register for a free account if you have not done so yet. In the characters tab top left, search for Eve. Download the character "Eve by J.Gonzales" with settings "FBX for Unity" and "T-Pose" to a new Assets/Eve folder. The fbx file is a container file that includes the materials and meshes, but you will have to extract them.
+Select "Eve by  J.Gonzales" in the Eve folder, and click on the button "Extract Textures" in the Inspector and save them to a new folder Assets/Eve/Textures. Do the same with the materials in the Assets/Eve/Materials folder. You may have to click a button "fix now" in a popup box when you select or open a texture. 
+
+Now replace the mesh. In the hierarchy, expand PlayerArmature/Geometry. Delete Armature-Mesh. In the Assets/Eve folder, expand Eve by J.Gonzalez and drag the mesh to Geometry, where you just deleted the Armature-Mesh. You will now see Eve, but when you try to move her, she just slides.
+
+Create the avatar. In Assets/Eve, select Eve by J.Gonzales and in the Inspector click the Rig tab. Change the Animation Type to Humanoid and click Apply. You will now see Eve by J.GonzalezAvatar in the Assets. In the Hierarchy, select the PlayerArmature. In the inspector, replace the Avatar with the new avatar.
+
+Click Play and use the arrow keys to walk/jump Eve.

@@ -1,3 +1,5 @@
+Rad,300
 Midnight,200
+Lucky,200
+Patrick,175
 Sox,150
-Ernst, 100
