@@ -1,0 +1,59 @@
+Adaptation of the tutorial at https://www.homeandlearn.co.uk/games-programming/unity-3rd-person-controller.html . 
+Start a project in 3D URP (Universal Render Pipeline)
+If you have not added the Third Person Controller to your Assets, get it from https://assetstore.unity.com/packages/essentials/starter-assets-third-person-character-controller-196526 
+In Unity, find it in the Package Manager (Window - Package Manager - Packages:My Assets - Sort: Purchase Date (up). You may have to refresh the Assets list (middle below). First click Download, then click Import. You will have to install/upgrade dependencies. You also want to *Restart* the editor. You may need to use Import from the Package Manager again. When you are done importing, you will see a folder Assets/StarterAssets. The third person controller is in the subfolder ThirdPersonController.
+Start with the SampleScene. Create a plane (Game Object - 3d Object - Plane). Reset the transform of the plane. From the Assets/StarterAssets/ThirdPersonController/Prefabs folder, add to the Hierarchy the MainCamera, the PlayerFollowCamera, and the PlayerArmature. Delete or disable the old Main Camera. 
+The robot will be purple. In the Assets/StarterAssets/THirdPersonCOntroller/Character/Materials folder, highlight all three materials and convert them to URP with Edit-Rendering-Materials-Convert selected built-in materials to URP. Click Proceed. 
+Prepare the PlayerArmature for replacing the mesh: right click - Prefab - Unpack Completely. 
+
+Get a character from Mixamo. Register for a free account if you have not done so yet. In the characters tab top left, search for Eve. Download the character "Eve by J.Gonzales" with settings "FBX for Unity" and "T-Pose" to a new Assets/Eve folder. The fbx file is a container file that includes the materials and meshes, but you will have to extract them.
+Select "Eve by  J.Gonzales" in the Eve folder, and click on the button "Extract Textures" in the Inspector and save them to a new folder Assets/Eve/Textures. Do the same with the materials in the Assets/Eve/Materials folder. You may have to click a button "fix now" in a popup box when you select or open a texture. 
+
+Now replace the mesh. In the hierarchy, expand PlayerArmature/Geometry. Delete Armature-Mesh. In the Assets/Eve folder, expand Eve by J.Gonzalez and drag the mesh to Geometry, where you just deleted the Armature-Mesh. You will now see Eve, but when you try to move her, she just slides.
+
+Create the avatar. In Assets/Eve, select Eve by J.Gonzales and in the Inspector click the Rig tab. Change the Animation Type to Humanoid and click Apply. You will now see Eve by J.GonzalezAvatar in the Assets. In the Hierarchy, select the PlayerArmature. In the inspector, replace the Avatar with the new avatar.
+
+Click Play and use the arrow keys to walk/jump Eve.
+
+===================================================================================
+Adaptation of the tutorial at https://www.homeandlearn.co.uk/games-programming/unity-input-controller.html .
+Go to Mixamo.com, log in, and select the Eve character in the Characters section. With Eve showing, go to Animations, open the Search box, and select Dance. Search on Salsa. Download all ten Salsa animations and name them Eve@Salsa Dancing 01.fbx and so on. 
+
+Go to Assets/ StarterAssets/ InputSystem and double click the StarterAssets icon. The current action map is Player. Expand the actions to check which keys have been mapped and pick a key that is not in use yet, such as the X. 
+Add an action below Move, Look, Jump, and Sprint and name it Salsa. Click on No Binding right below Salsa, then on the Path dropdown, and select Keyboard - X. IMPORTANT - also select the box KeyBoardMouse. Click on Save Asset at the top. Close the Input System window. 
+
+Open the StarterAssetsInput.cs script in Assets/StarterAssets/InputSystem. Add public bool salsa; right after public bool sprint;. Add the following methods:
+
+		public void OnSalsa(InputValue value)
+		{
+			SalsaInput(value.isPressed);
+		}
+
+		public void SalsaInput(bool newSalsaState)
+		{
+			salsa = newSalsaState;
+		}
+
+In Assets/Eve, expan Eve@Salsa Dancing 01 and compare it with expansion of the initial Eve by J. Gonzales. You will notice that the latter has the mixamo.com rig, but none of the others need it so they don't have it. 
+For Eve@Salsa Dancing 01, click the Rig tab and switch animation type to Humanoid. For Avatar definition, change it from Create From This Model to Copy from Other Avatar, click the circle to the right and select Eve By J.GonzalezAvatar. Click Apply. 
+
+
+Go to Assets/ StarterAssets/ ThirdPersonController/Character/Animations and double click on the Animation COntroller called StarterAssetsThirdPerson. Let's not create another layer but just add to the Base layer. 
+Click on the Parameters tab.
+Add a new parameter. Click on the Parameters tab and the + sign to the right of the name box. Make it a trigger and call it Salsa. 
+Go to Assets/Eve, expand Eve@Salsa Dancing 01 and drag the animation (green triangle) into the Animator window. Right click New State , select Make Transition, and drag a transition from Idle Walk Run Blend to Salsa Dancing 01. Select the line  to Salsa Dancing 01, and it will turn blue. Uncheck Has Exit Time and set the Condition as Salsa. This starts the salsa animations when the key X is pressed. We are not going back to Idle Run Walk Blend, but continue to go to the other salsa animations. 
+For all the other salsa animations (2-10) do the following: set the rig as Humanoid, change the avatar definition to Copy From Other Avatar, use Eve By J.GonzalezAvatar, Apply.
+Now drag the rest of the animations to the Animator. For each, create a transition from 2 to 3, 3 to 4, and so on, ending with 10 to Idle Walk Run Blend. Make it single transitions each and select Has Exit Time each time. 
+
+
+Go to Assets/StarterAssets/ ThirdPersonController/Scripts and open the ThirdPersonCOntroller script. After the Update() method, add the method 
+private void Salsa() 
+{
+	if (_input.salsa)
+	{
+		_animator.SetTrigger("Salsa");
+		_input.salsa = false;
+	}
+}
+Call the Salsa() method from Update. Below the line Move(); add the line Salsa();
+Now you can run the Salsa animation by using the X key. 

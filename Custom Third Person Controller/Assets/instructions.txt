@@ -13,3 +13,13 @@ Now replace the mesh. In the hierarchy, expand PlayerArmature/Geometry. Delete A
 Create the avatar. In Assets/Eve, select Eve by J.Gonzales and in the Inspector click the Rig tab. Change the Animation Type to Humanoid and click Apply. You will now see Eve by J.GonzalezAvatar in the Assets. In the Hierarchy, select the PlayerArmature. In the inspector, replace the Avatar with the new avatar.
 
 Click Play and use the arrow keys to walk/jump Eve.
+
+===================================================================================
+You cand find the skeleton asset at https://assetstore.unity.com/packages/3d/characters/humanoids/fantasy/skeleton-pbr-animated-low-poly-30659 
+
+Create the scene "Skeleton" is in the Assets/Scenes folder.
+Create a plane in the scene and add to the Hierarchy the MainCamera, the PlayerFollowCamera, and the PlayerArmature. Delete or disable the old Main Camera.  
+In Assets/ Skeleton ect select skeleton_static. In the Inspector, Rig tab, set Animation Type to Humanoid and click Apply. In the same tabk, make sure that Avatar definition is set to Create from this Model. In the Materials Tab, change locaton to Use Embedded Materials and export the materials to Assets/Skeleton etc/Materials. 
+
+Prepare the PlayerArmature for replacing the mesh: right click - Prefab - Unpack Completely. 
+From Assets/Skeleton etc, drage skeleton_static to the Geometry under PlayerArmature in the Hierarchy. With the PlayerArmature selected, drag the Assets/Skeleton etc/ skeleton_staticAvatar to the avatar in the Inspector. 
